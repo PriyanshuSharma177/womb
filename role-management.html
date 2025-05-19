@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Role Management</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      min-height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #1e293b;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+    .sidebar h2 {
+      margin: 0 0 30px;
+      font-weight: 700;
+      font-size: 24px;
+      color: #ff6b6b;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #ff6b6b;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px 40px;
+      background-color: white;
+      box-shadow: inset 0 0 10px #f0f0f0;
+      overflow-x: auto;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    /* Table styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    thead {
+      background-color: #e5e7eb;
+    }
+    thead th {
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 700;
+      color: #4b5563;
+      border-bottom: 2px solid #d1d5db;
+    }
+    tbody tr {
+      border-bottom: 1px solid #f3f4f6;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+    tbody td {
+      padding: 12px 15px;
+      color: #374151;
+      vertical-align: middle;
+    }
+
+    /* Action buttons */
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .btn-edit {
+      background-color: #3b82f6;
+      margin-right: 8px;
+    }
+    .btn-edit:hover {
+      background-color: #2563eb;
+    }
+    .btn-delete {
+      background-color: #ef4444;
+    }
+    .btn-delete:hover {
+      background-color: #b91c1c;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+      }
+      .sidebar a {
+        margin: 0 10px;
+      }
+      .main-content {
+        padding: 20px;
+      }
+      table {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>Womb</h2>
+    <a href="admin management page.html">Admin Management</a>
+    <a href="#" class="active">Role Management</a>
+  </nav>
+
+  <main class="main-content">
+    <h1>Role Management</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Role Name</th>
+          <th>Permissions</th>
+          <th>Number of Users</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Admin</td>
+          <td>Full Access</td>
+          <td>4</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Moderator</td>
+          <td>Limited Access</td>
+          <td>7</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Viewer</td>
+          <td>Read Only</td>
+          <td>10</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+          </td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
