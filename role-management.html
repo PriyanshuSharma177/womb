@@ -17,13 +17,15 @@
     }
     
     .sidebar {
-      width: 220px;
-      background-color: #1e293b;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      padding: 30px 20px;
+  width: 220px;
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  
     }
+
     .sidebar h2 {
       margin: 0 0 30px;
       font-weight: 700;
@@ -132,22 +134,110 @@
         font-size: 13px;
       }
     }
+    .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px 14px;
+  width: 250px;
+  border: 2px solid #9ca3af; 
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.btn-add {
+  background-color: #10b981; /* Green */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #059669;
+}
+.btn-view {
+      background-color: #6a994e;
+    }
+    .btn-view:hover {
+      background-color: #31572c;
+    }
+    .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #cbd5e1;
+  text-align: center;
+}
+.logout-btn {
+  margin-top: 20px; 
+  padding: 10px 15px;
+  background-color: #1e293b;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
   </style>
 </head>
 <body>
   <nav class="sidebar">
     <h2>Womb</h2>
+    <div class="profile">
+    <img src="Ellipse.png" alt="Profile" class="profile-image" />
+    <p class="profile-name">Alexandra robert</p>
+    <p class="profile-email">Alexandrarobert@gmail.com</p>
+  </div>
     <a href="admin management page.html">Admin Management</a>
     <a href="#" class="active">Role Management</a>
+    <button class="logout-btn">Logout</button>
   </nav>
 
   <main class="main-content">
     <h1>Role Management</h1>
+    <div class="top-bar">
+    <input type="text" placeholder="Search..." class="search-input" />
+    <button class="btn btn-add">Add</button>
+    </div>
+
     <table>
       <thead>
         <tr>
-          <th>Role Name</th>
-          <th>Permissions</th>
+          <th>Jacob Jones</th>
           <th>Number of Users</th>
           <th>Actions</th>
         </tr>
@@ -155,29 +245,92 @@
       <tbody>
         <tr>
           <td>Admin</td>
-          <td>Full Access</td>
-          <td>4</td>
+          <td>20</td>
           <td>
             <button class="btn btn-edit">Edit</button>
             <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
           </td>
         </tr>
         <tr>
-          <td>Moderator</td>
-          <td>Limited Access</td>
-          <td>7</td>
+          <td>jenny wilson</td>
+          <td>30</td>
           <td>
             <button class="btn btn-edit">Edit</button>
             <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
           </td>
         </tr>
         <tr>
-          <td>Viewer</td>
-          <td>Read Only</td>
+          <td>Courtney Henry</td>
           <td>10</td>
           <td>
             <button class="btn btn-edit">Edit</button>
             <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Darrell Steward</td>
+          <td>90</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Bessie Cooper</td>
+          <td>10</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Jane Cooper</td>
+          <td>12</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Jerome Bell</td>
+          <td>91</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Ronald Richards</td>
+          <td>45</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>jenny wilson</td>
+          <td>23</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Annette Black</td>
+          <td>45</td>
+          <td>
+            <button class="btn btn-edit">Edit</button>
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-view">View</button>
           </td>
         </tr>
       </tbody>

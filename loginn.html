@@ -33,17 +33,18 @@
 
     .right {
       flex: 1;
-      background-image: url('https://assets.clevelandclinic.org/transform/LargeFeatureImage/c5036c8f-5338-4bdb-9780-cb6ac0a6cfe3/pregnant-person-glow-1427728822_967x544_jpg'); /* Replace with your image path */
+      background-image: url('womb.png'); 
       background-size: cover;
       background-position: center;
     }
 
     .login-box {
       width: 100%;
-      max-width: 350px;
-      padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
+    max-width: 350px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
     }
 
     .login-box h1 {
@@ -78,13 +79,29 @@
       background-color: #e65a5a;
     }
 
+    .logo{
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      
+    }
+    .decorative-image {
+  width: 80px; 
+  height: auto;
+  margin-bottom: 20px;
+  align-self: flex-start; 
+}
+
+
   </style>
 </head>
 <body>
   <div class="main-container">
     <div class="left">
+      <img src="Frame.png" alt="Flower" class="decorative-image" />
       <div class="login-box">
-        <h1>Womb</h1>
+         <img src="image.png" alt="Logo" class="logo" />
+        
         <form>
           <label for="email">Email Address</label>
           <input type="email" id="email" placeholder="Enter your email" required>
