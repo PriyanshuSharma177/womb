@@ -210,6 +210,29 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.header-banner {
+  background-image: url('rainbow.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 30px;
+  border-radius: 12px;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+.header-banner h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-banner .breadcrumb {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #334155;
+}
 
   </style>
 </head>
@@ -228,7 +251,10 @@
   
 
   <main class="main-content">
-    <h1>Admin Management</h1>
+     <div class="header-banner">
+  <h1>Admin management</h1>
+  <p class="breadcrumb">Dashboard • Role Management</p>
+</div>
     <div class="top-bar">
     <input type="text" placeholder="Search..." class="search-input" />
     <button class="btn btn-add">Add</button>
